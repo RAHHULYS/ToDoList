@@ -13,7 +13,7 @@ Follow these steps to get the project up and running on your local machine.
 Start by cloning the repository from GitHub:
 
 ```bash
-git clone https://github.com/RAHHULYS/Node-Projects.git
+https://github.com/RAHHULYS/ToDoList.git
 ```
 ### 2.  Install Dependencies
 
