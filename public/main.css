@@ -444,3 +444,85 @@ form > :last-child {
   text-align: center;
   margin-top: 1rem;
 }
+/*************
+   TASKS (Drag and Drop)
+*************/
+
+/* Style for draggable task items */
+.single-task {
+  padding: 1rem 2.5rem;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  position: relative;
+}
+.single-task:active {
+  cursor: grabbing;
+}
+
+/* Hover effect for draggable items */
+.single-task:hover {
+  box-shadow: var(--shadow-4);
+}
+
+/* Indicate a valid drop target with a highlight border */
+.single-task.drag-over {
+  background-color: var(--primary-50);
+  border: 2px dashed var(--primary-500);
+  transition: border 0.2s ease-in-out;
+}
+
+/* Ghost effect for the dragged item */
+.single-task.dragging {
+  opacity: 0.5;
+  border: 2px dashed var(--primary-500);
+  box-shadow: none;
+}
+
+/* Placeholder spacing for drag-drop target */
+.placeholder {
+  height: 3.5rem;
+  background: var(--primary-100);
+  border-radius: var(--borderRadius);
+  margin: 0.5rem 0;
+  opacity: 0.6;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Drag handle icon styling */
+.drag-handle {
+  font-size: 1.2rem;
+  color: var(--grey-500);
+  margin-right: 1rem;
+  cursor: move;
+}
+
+/* Ensure tasks are spaced nicely */
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* Existing styles... */
+
+/* Dragging styles */
+.dragging {
+  opacity: 0.5;
+}
+
+.single-task.drag-over {
+  border: 2px dashed #007bff;
+  background-color: #f0f8ff;
+  padding: 1rem;
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+/* Styles for delete button */
+.delete-btn i {
+  color: red;
+}
